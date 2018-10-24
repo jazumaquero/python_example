@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+<h1>Latest Business Day</h1>
+<p>Fill the form</p>
+{% from "helpers.html" import render_field %}
+<form method="POST" action="{{ url_for('frontend.form') }}" method="post" enctype="multipart/form-data">
+    <dl>
+        {{ render_field(form.country) }}
+        {{ render_field(form.current_date) }}
+        {{ render_field(form.shifted_days) }}
+    </dl>
+    <input type="submit" value="Go">
+</form>
+{% endblock %}
