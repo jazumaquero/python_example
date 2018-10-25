@@ -12,7 +12,7 @@ QueryRootType = GraphQLObjectType(
             args={
                 'country': GraphQLArgument(GraphQLNonNull(GraphQLString)),
                 'current_date': GraphQLArgument(GraphQLString),
-                'shifted_days': GraphQLArgument(GraphQLString)
+                'shifted_days': GraphQLArgument(GraphQLInt)
             },
             resolver=latest_business_day
         )
